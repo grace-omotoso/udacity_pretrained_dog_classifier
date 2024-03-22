@@ -68,7 +68,7 @@ def classify_images(images_dir, results_dic, model):
     # loop through dictionary
     for key in results_dic:
       full_path = images_dir+key
-      model_label = classifer(full_path, model).upper().trim()
+      model_label = classifier(full_path, model).lower().strip()
       truth = results_dic[key][0]
     # update dictionary
       if truth in model_label:
